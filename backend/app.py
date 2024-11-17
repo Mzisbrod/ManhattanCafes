@@ -4,6 +4,10 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from backend.models import db, User, Cafe, Review, Favourite
 from backend.config import Config
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Initialize Flask app and configuration
 app = Flask(__name__)
@@ -21,7 +25,8 @@ def index():
 # View the map with cafes marked
 @app.route('/map')
 def map_view():
-    return render_template('map.html')
+    api_key = os.environ.get('GOOGLE_MAPS_API_KEY')  # Fetch API key from environment
+    return render_template('map.html', GOOGLE_MAPS_API_KEY=api_key)
 
 # Get dictionary of all cafes
 @app.route('/api/cafes')
@@ -47,7 +52,7 @@ def populate_cafes():
         'location': '40.7831, -73.9712', # Manhattan center coordinates,
         'radius': 5000, # 5 km radius
         'type': 'cafe',
-        'key': current_app.config['GOOGLE_MAPS_API_KEY']
+        'key': os.environ.get('GOOGLE_MAPS_API_KEY')
     }
 
     # Request to Google Places API

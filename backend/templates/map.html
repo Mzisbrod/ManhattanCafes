@@ -10,7 +10,7 @@
     <h1>Manhattan Cafe Map</h1>
     <div id="map" style="height:500px; width: 100%;"></div>
     <!-- Google Maps JavaScript API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCW7_QX4cQ-G6fYJhcdAB4pPHu9833Byow&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_MAPS_API_KEY }}&callback=initMap" async defer></script>
     <!-- Your map.js script -->
     <script src="{{ url_for('static', filename='map.js') }}"></script>
 </body>
