@@ -1,0 +1,5 @@
+Flask==2.3.2 # Flask web framework
+Flask-SQLAlchemy==3.0.3 # ORM for database integration
+Flask-Migrate==4.0.0 # For handling database migrations
+requests==2.31.0 # For making HTTP requests (e.g., to the Google Maps API)
+gunicorn==20.1.0 # A production WSGI server for running the Flask app

@@ -1,0 +1,21 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 20px 0;
+    color: #333;
+}
+
+#map {
+    height: 500px; /* Define height */
+    width: 80%; /* Define width */
+    max-width: 800px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}

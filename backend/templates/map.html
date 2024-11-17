@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manhattan Cafes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <h1>Manhattan Cafe Map</h1>
+    <div id="map" style="height:500px; width: 100%;"></div>
+    <!-- Google Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCW7_QX4cQ-G6fYJhcdAB4pPHu9833Byow&callback=initMap" async defer></script>
+    <!-- Your map.js script -->
+    <script src="{{ url_for('static', filename='map.js') }}"></script>
+</body>
+</html>
